@@ -85,7 +85,10 @@ userSchema.virtual('items', {
 });
 
 userSchema.pre(/^find/, function (next) {
-  this.populate('favorite');
+  this.populate({
+    path: 'favorite',
+    select: '_id -userInfo',
+  });
   next();
 });
 
