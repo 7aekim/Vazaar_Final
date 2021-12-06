@@ -16,7 +16,6 @@ const itemSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Please provide item condition'],
       trim: true,
-      lowercase: true,
     },
     color: {
       type: String,
@@ -37,7 +36,6 @@ const itemSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Please provide item description'],
       trim: true,
-      lowercase: true,
     },
     price: {
       type: Number,
