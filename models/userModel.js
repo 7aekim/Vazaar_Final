@@ -82,12 +82,13 @@ userSchema.virtual('items', {
   ref: 'Item',
   foreignField: 'userInfo',
   localField: '_id',
+  select: '-userInfo',
 });
 
 userSchema.pre(/^find/, function (next) {
   this.populate({
     path: 'favorite',
-    select: '_id -userInfo',
+    select: '',
   });
   next();
 });

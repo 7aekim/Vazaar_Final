@@ -74,7 +74,7 @@ const itemSchema = new mongoose.Schema(
 itemSchema.pre(/^find/, function (next) {
   this.populate({
     path: 'userInfo',
-    select: '-__v -passwordChangedAt',
+    select: '-__v -passwordChangedAt -favorite',
   });
 
   next();

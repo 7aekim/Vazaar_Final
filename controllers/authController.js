@@ -199,11 +199,11 @@ exports.verifyLink = catchAsync(async (req, res) => {
     await Token.findByIdAndRemove(token._id);
 
     res.send(
-      'email verified sucessfully, please go back to the Vazaar website'
+      'email verified successfully, please go back to the Vazaar website'
     );
   } catch (error) {
     res.send(
-      'email verified sucessfully, please go back to the Vazaar website'
+      'email verified successfully, please go back to the Vazaar website'
     );
   }
 });
