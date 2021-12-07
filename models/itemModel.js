@@ -53,7 +53,7 @@ const itemSchema = new mongoose.Schema(
     images: [String],
     createdAt: {
       type: Date,
-      default: Date.now(),
+      default: Date.now,
     },
     sold: {
       type: Boolean,
